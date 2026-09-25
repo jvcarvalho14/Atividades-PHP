@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moedas</title>
+</head>
+<body>
+    <h1>Conversor de Moedas</h1>
+    <form action="conversor.php" method="post">
+        <input type="number" id="valor" placeholder="Digite o valor em reais" name="valor" required><br><br>
+        <label for="moeda">Escolha a moeda:</label>
+        <select id="moeda" name="moeda" required>
+            <option value="dolar">Dólar</option>
+            <option value="euro">Euro</option>
+            <option value="libra">Libra Esterlina</option>
+        </select><br><br>
+        <input type="submit" value="Converter">
+    </form>
+</body>
+</html>
