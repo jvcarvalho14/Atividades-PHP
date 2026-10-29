@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atividade POO em PHP</title>
+<style>
+  body { font-family: Arial, sans-serif; max-width: 640px; margin: 30px auto; padding: 0 15px; }
+  fieldset { margin-bottom: 25px; border-radius: 6px; }
+  label { display: block; margin: 8px 0 2px; }
+  input, select { padding: 6px; width: 100%; box-sizing: border-box; }
+  button { margin-top: 12px; padding: 8px 16px; }
+</style>
+</head>
+<body>
+
+<h1>Atividade POO em PHP</h1>
+
+<fieldset>
+  <legend>Questão 1 — Livro</legend>
+  <form action="questao1.php" method="POST">
+    <label>Título <input type="text" name="titulo" required></label>
+    <label>Autor <input type="text" name="autor" required></label>
+    <label>Ano de publicação <input type="number" name="ano" min="1" required></label>
+    <label>Páginas <input type="number" name="paginas" min="1" required></label>
+    <label>Situação
+      <select name="situacao">
+        <option>Disponível</option>
+        <option>Emprestado</option>
+        <option>Reservado</option>
+      </select>
+    </label>
+    <button type="submit">Verificar</button>
+  </form>
+</fieldset>
+
+<fieldset>
+  <legend>Questão 2 — Conta bancária</legend>
+  <form action="questao2.php" method="POST">
+    <label>Conta
+      <select name="conta">
+        <option value="1001">1001 — João Silva (Corrente)</option>
+        <option value="1002">1002 — Maria Souza (Poupança)</option>
+      </select>
+    </label>
+    <label>Operação
+      <select name="operacao">
+        <option value="depositar">Depositar</option>
+        <option value="sacar">Sacar</option>
+        <option value="saldo">Consultar saldo</option>
+      </select>
+    </label>
+    <label>Valor <input type="number" name="valor" step="0.01" value="0"></label>
+    <button type="submit">Executar</button>
+  </form>
+</fieldset>
+
+<fieldset>
+  <legend>Questão 3 — Funcionário</legend>
+  <form action="questao3.php" method="POST">
+    <label>Tipo
+      <select name="tipo">
+        <option value="administrativo">Administrativo</option>
+        <option value="vendedor">Vendedor</option>
+      </select>
+    </label>
+    <label>Nome <input type="text" name="nome" required></label>
+    <label>Matrícula <input type="text" name="matricula" required></label>
+    <label>Salário-base <input type="number" name="salario" step="0.01" min="0" required></label>
+    <label>Cargo <input type="text" name="cargo" value="Administrativo"></label>
+    <label>Comissão (%) — só vendedor <input type="number" name="comissao" step="0.01" min="0" value="0"></label>
+    <label>Total de vendas — só vendedor <input type="number" name="vendas" step="0.01" min="0" value="0"></label>
+    <button type="submit">Calcular salário</button>
+  </form>
+</fieldset>
+
+<fieldset>
+  <legend>Questão 4 — Aluno</legend>
+  <form action="questao4.php" method="POST">
+    <label>Nome <input type="text" name="nome" required></label>
+    <label>Matrícula <input type="text" name="matricula" required></label>
+    <label>Curso <input type="text" name="curso" required></label>
+    <label>Nota 1 <input type="number" name="nota1" step="0.1" min="0" max="100" required></label>
+    <label>Nota 2 <input type="number" name="nota2" step="0.1" min="0" max="100" required></label>
+    <label>Nota 3 <input type="number" name="nota3" step="0.1" min="0" max="100" required></label>
+    <label>Frequência (%) <input type="number" name="frequencia" step="0.1" min="0" max="100" required></label>
+    <button type="submit">Ver situação</button>
+  </form>
+</fieldset>
+
+</body>
+</html>
